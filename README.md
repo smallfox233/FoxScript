@@ -1,0 +1,2 @@
+# FoxScript
+python脚本
