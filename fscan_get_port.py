@@ -1,7 +1,7 @@
 # 作者: 小狐狸FM
 # 版本: 2022.07.03
 # 功能：提取fscan结果中各个IP开放的端口，显示并以IP为文件名写入对应的开放端口
-# 提示：只需要输入含有IP:端口 open的那些字符串
+
 import os
 
 def get_host_port(str):
