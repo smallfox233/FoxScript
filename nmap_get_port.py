@@ -10,10 +10,18 @@ pattern = "\d{1,6}/" #正则表达式，端口/协议
 with open(file_pth,"r") as fp:
     nmap_lis = list(fp.read().split("\n"))
 # print(nmap_lis)
-#显示
+#处理
 for i in nmap_lis:
     if "open" in i:
         result_lis.append(re.findall(pattern,i)[0].replace("/",""))
+#转换
+for i in range(len(result_lis)): #转换为int
+    result_lis[i] = int(result_lis[i])
+#排序
+result_lis = sorted(result_lis)
+#转换
+for i in range(len(result_lis)): #转换为str
+    result_lis[i] = str(result_lis[i])
 #写入
 with open(result_pth,"w") as fp:
     fp.write("\n".join(result_lis))
