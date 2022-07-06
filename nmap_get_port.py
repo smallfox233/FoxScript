@@ -1,4 +1,5 @@
 # 作者：小狐狸FM
+# 版本：2022.07.06
 # 功能：过滤nmap扫描结果，正则匹配获取开放端口
 import re
 file_pth = "data/nmap.txt" #读取的文件路径
