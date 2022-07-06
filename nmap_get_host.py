@@ -1,4 +1,5 @@
 # 作者：小狐狸FM
+# 版本：2022.07.06
 # 功能：过滤nmap扫描结果，获取存活IP
 file_pth = "data/nmap.txt" #读取的文件路径
 result_pth = "data/result.txt" #写入的文件路径
