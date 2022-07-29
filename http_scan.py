@@ -5,6 +5,7 @@ import requests
 
 # 文本路径
 pth = "url.txt"
+# 检测成功时，URL的文本存储路径
 new_pth = "new.txt"
 # 连接超时时长,秒
 time = 3
