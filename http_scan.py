@@ -1,6 +1,7 @@
 # coding=utf-8
 # 作者：小狐狸FM
-# GET请求，检测状态码
+# 仓库：https://github.com/smallfox233/FoxScript
+# 功能：GET请求，检测状态码
 import requests
 
 # 文本路径
