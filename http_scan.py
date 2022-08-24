@@ -20,7 +20,7 @@ add_left = ""
 s1 = ""
 s2 = ""
 # 文件读取
-with open(pth, "r") as fp:
+with open(pth, "r",encoding="utf-8") as fp:
     s1 = fp.read()
 lis = list(s1.split("\n"))
 # print(lis)
