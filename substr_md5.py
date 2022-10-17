@@ -24,8 +24,8 @@ m_lis = []
 m_pth = sub_str + ".txt"
 # 需要匹配的子串初始位置(必须)，0表示第一个字符，-1表示最后一个字符
 sub_start = 6
-# 需要匹配的子串长度
-sub_len = len(sub_str)
+# 需要匹配的子串长度(必须)
+sub_len = 6
 # 需要匹配的子串结束位置
 sub_end = sub_start + sub_len
 if sub_start >= m_len: #初始位置超过主串长度时
@@ -41,7 +41,7 @@ with open(m_pth,"a+") as fp:
         m = ''.join(random.choice(char) for i in range(m_len))
         # 密文,32位md5
         c = hashlib.md5(m.encode())
-        if m not in m_lis and m[sub_start:sub_end:sub_len]==sub_str: #未生成过的明文，且成功获取内容时
+        if m not in m_lis and m[sub_start:sub_len:]==sub_str: #未生成过的明文，且成功获取内容时
             print("解密成功！")
             print("明文:",m)
             print("密文:",c)
