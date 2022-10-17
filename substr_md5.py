@@ -14,17 +14,17 @@ import sys
 random.seed()
 # 字符集,大小写字母+数字
 char = string.ascii_letters + string.digits
-# 需要匹配的子串内容
+# 需要匹配的子串内容(必须)
 sub_str = "8b184b"
-# 明文长度
+# 明文长度(必须)
 m_len = 8
 # 已爆破过的明文
 m_lis = []
 # 已爆破过的明文存放路径
 m_pth = sub_str + ".txt"
-# 需要匹配的子串初始位置，0表示第一个字符，-1表示最后一个字符
+# 需要匹配的子串初始位置(必须)，0表示第一个字符，-1表示最后一个字符
 sub_start = 6
-# 需要匹配的子串长度
+# 需要匹配的子串长度(必须)
 sub_len = 6
 # 需要匹配的子串结束位置
 sub_end = sub_start + sub_len
