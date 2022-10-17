@@ -24,8 +24,8 @@ m_lis = []
 m_pth = sub_str + ".txt"
 # 需要匹配的子串初始位置(必须)，0表示第一个字符，-1表示最后一个字符
 sub_start = 6
-# 需要匹配的子串长度(必须)
-sub_len = 6
+# 需要匹配的子串长度
+sub_len = len(sub_str)
 # 需要匹配的子串结束位置
 sub_end = sub_start + sub_len
 if sub_start >= m_len: #初始位置超过主串长度时
