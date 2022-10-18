@@ -6,6 +6,7 @@
 # length为匹配的长度
 
 import hashlib
+import os
 import string
 import random
 import sys
@@ -35,20 +36,26 @@ if sub_len < 0:  # 子串长度负数
     print("sub_end不能为负数!!")
     sys.exit()
 if sub_end == 0: #子串结束位置为0时
-    sub_end = -1
+    sub_end = 32
+if os.path.exists(m_pth):
+    with open(m_pth,"r") as fp:
+        tmp = fp.read().split("\n")
+        for i in tmp: #清除密文，保留明文
+            m_lis.append(''.join(i.split("$")[0]))
+        # print(m_lis)
+        # sys.exit()
 with open(m_pth, "a+") as fp:
-    tmp = fp.read().split("\n")
-    for i in tmp: #清除密文，保留明文
-        m_lis.append(i.split("$")[0])
     while True:  # 死循环
         # 明文
         m = ''.join(random.choice(char) for i in range(m_len))
         # 密文,32位md5
         c = hashlib.md5(m.encode()).hexdigest()
-        if m not in m_lis and c[sub_start:sub_end:] == sub_str:  # 未生成过的明文，且成功获取内容时
+        if c[sub_start:sub_end:] == sub_str:  # 未生成过的明文，且成功获取内容时
             print("解密成功！")
             print("明文:", m)
             print("密文:", c)
             break
-        else:
+        elif m not in m_lis:
             fp.write(m + "$" + str(c) + "\n")
+        # print(m,c)
+        # break
