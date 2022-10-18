@@ -43,7 +43,7 @@ with open(m_pth, "a+") as fp:
         m = ''.join(random.choice(char) for i in range(m_len))
         # 密文,32位md5
         c = hashlib.md5(m.encode()).hexdigest()
-        if m not in m_lis and m[sub_start:sub_end:] == sub_str:  # 未生成过的明文，且成功获取内容时
+        if m not in m_lis and c[sub_start:sub_end:] == sub_str:  # 未生成过的明文，且成功获取内容时
             print("解密成功！")
             print("明文:", m)
             print("密文:", c)
