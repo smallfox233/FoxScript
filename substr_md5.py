@@ -35,16 +35,18 @@ if sub_end < 0:  # 子串长度负数
     print("sub_end不能为负数!!")
     sys.exit()
 with open(m_pth, "a+") as fp:
-    m_lis = fp.read().split("\n")
+    tmp = fp.read().split("\n")
+    for i in tmp: #清除密文，保留明文
+        m_lis.append(i.split("$")[0])
     while True:  # 死循环
         # 明文
         m = ''.join(random.choice(char) for i in range(m_len))
         # 密文,32位md5
-        c = hashlib.md5(m.encode())
+        c = hashlib.md5(m.encode()).hexdigest()
         if m not in m_lis and m[sub_start:sub_end:] == sub_str:  # 未生成过的明文，且成功获取内容时
             print("解密成功！")
             print("明文:", m)
             print("密文:", c)
             break
         else:
-            fp.write(m + " " + c + "\n")
+            fp.write(m + "$" + str(c) + "\n")
