@@ -1,5 +1,5 @@
 # 作者：小狐狸FM
-# 作用：MD5子串爆破，停止程序时将会保存一个临时文件用于下一次继续爆破
+# 作用：MD5子串爆破，停止程序时将会保存一个临时文件
 # PHP函数介绍：https://www.php.net/manual/zh/function.substr.php
 # substr(主串，offset，length)
 # offset为匹配的初始位置
@@ -17,8 +17,8 @@ random.seed()
 char = string.ascii_letters + string.digits
 # 需要匹配的子串内容(必须)
 sub_str = "8b184b"
-# 明文长度(必须)
-m_len = 10
+# 明文长度
+m_len = random.randint(1,20)
 # 已爆破过的明文
 m_lis = []
 # 已爆破过的明文存放路径
@@ -37,25 +37,18 @@ if sub_len < 0:  # 子串长度负数
     sys.exit()
 if sub_end == 0: #子串结束位置为0时
     sub_end = 32
-if os.path.exists(m_pth):
-    with open(m_pth,"r") as fp:
-        tmp = fp.read().split("\n")
-        for i in tmp: #清除密文，保留明文
-            m_lis.append(''.join(i.split("$")[0]))
-        # print(m_lis)
-        # sys.exit()
+# 随机生成新MD5
 with open(m_pth, "a+") as fp:
     while True:  # 死循环
         # 明文
         m = ''.join(random.choice(char) for i in range(m_len))
         # 密文,32位md5
-        c = hashlib.md5(m.encode()).hexdigest()
+        c = str(hashlib.md5(m.encode()).hexdigest())
         if c[sub_start:sub_end:] == sub_str:  # 未生成过的明文，且成功获取内容时
             print("解密成功！")
             print("明文:", m)
             print("密文:", c)
-            break
-        elif m not in m_lis:
+            sys.exit()
+        if m not in m_lis:
             fp.write(m + "$" + str(c) + "\n")
-        # print(m,c)
-        # break
+
