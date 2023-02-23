@@ -4,7 +4,7 @@
 import json
 tmp = ""
 result = ""
-filename = "xxx.json" #目标文件
+filename = input("xxx.json") #目标文件
 with open(filename,"r",encoding='utf-8') as fp:
     tmp = fp.read()
 # print(tmp)
