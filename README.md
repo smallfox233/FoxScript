@@ -1,6 +1,10 @@
 # FoxScript
 python脚本，数据处理、编码转换。
 
+# bash_to_base64.py
+```
+bash命令base64编码转换
+```
 # bash_to_spel.py
 
 ```
