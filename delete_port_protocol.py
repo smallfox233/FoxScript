@@ -1,4 +1,5 @@
 # 作者：小狐狸FM
+# 项目：https://github.com/smallfox233/FoxScript
 # 功能：URL批量处理，删除协议头和端口等无关信息
 
 lis_protocol = ["https", "http", "ftp"]  # 协议头，https需要放在http之前
