@@ -14,6 +14,10 @@ bash命令base64编码转换
 ```
 URL批量处理，删除协议头和端口等无关信息
 ```
+# fscan_get_host.py
+```
+提取fscan结果中的IP，递增排序显示IP，并写入文件
+```
 # http_scan.py
 
 ```
