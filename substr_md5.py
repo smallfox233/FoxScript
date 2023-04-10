@@ -1,5 +1,7 @@
 # 作者：小狐狸FM
-# 作用：MD5子串爆破，停止程序时将会保存一个临时文件
+# 项目：https://github.com/smallfox233/FoxScript
+# 功能：MD5子串爆破，停止程序时将会保存一个临时文件
+
 # PHP函数介绍：https://www.php.net/manual/zh/function.substr.php
 # substr(主串，offset，length)
 # offset为匹配的初始位置
@@ -16,7 +18,7 @@ random.seed()
 # 字符集,大小写字母+数字
 char = string.ascii_letters + string.digits
 # 需要匹配的子串内容(必须)
-sub_str = "8b184b"
+sub_str = input("需要匹配的子串: ") # 例：8b184b
 # 明文长度
 m_len = random.randint(1,20)
 # 已爆破过的明文
