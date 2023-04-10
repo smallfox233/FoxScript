@@ -32,7 +32,7 @@ if __name__ == '__main__':  # 主函数
     fscan_pth = input("fscan文件路径")  # 读取的文件路径
     fscan_lis = [] #列表
     result_dic = {} #字典
-    result_file_folder = input("目标文件夹")  # 保存各IP结果的文件夹路径
+    result_file_folder = input("输出文件夹名称")  # 保存各IP结果的文件夹路径
     create_file_folder(result_file_folder)
     # 读取
     with open(fscan_pth, "r", encoding="utf-8") as fp:
