@@ -1,4 +1,7 @@
-#将命令转换为SpEL表达式并输出
+# 作者：小狐狸FM
+# 项目：https://github.com/smallfox233/FoxScript
+# 功能：将命令转换为SpEL表达式并输出
+
 import base64
 def shell_to_spel(command):
     # 将shell命令转换为SpEL payload
