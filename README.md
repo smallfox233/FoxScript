@@ -1,6 +1,11 @@
 # FoxScript
 python脚本，数据处理、编码转换。
 
+# bash_to_spel.py
+介绍
+```
+将命令转换为SpEL表达式并输出
+```
 # http_scan.py
 介绍
 ```
