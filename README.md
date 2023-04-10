@@ -15,7 +15,7 @@ URL的前缀和后缀
 成功结果的文本保存路径
 ```
 
-# move_some_type_file.py
+# copy_some_type_file.py
 介绍
 ```
 将指定文件夹下(包括子文件夹)的所有指定后缀文件复制至目标文件夹
