@@ -1,8 +1,9 @@
 # 作者：小狐狸FM
 # 项目：https://github.com/smallfox233/FoxScript
 # 功能：过滤nmap扫描结果，获取存活IP
+
 file_pth = input("nmap结果文件路径：") #读取的文件路径
-result_pth = input("目标文件路径: ") #写入的文件路径
+result_pth = input("输出文件路径: ") #写入的文件路径
 nmap_lis = []
 result_lis = []
 #读取
