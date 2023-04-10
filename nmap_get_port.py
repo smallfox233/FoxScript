@@ -1,9 +1,9 @@
 # 作者：小狐狸FM
-# 版本：2022.07.06
+# 项目：https://github.com/smallfox233/FoxScript
 # 功能：过滤nmap扫描结果，正则匹配获取开放端口
 import re
-file_pth = "data/nmap.txt" #读取的文件路径
-result_pth = "data/result.txt" #写入的文件路径
+file_pth = input("nmap结果文件路径: ") #读取的文件路径
+result_pth = input("保存文件路径: ") #写入的文件路径
 nmap_lis = []
 result_lis = []
 pattern = "\d{1,6}/" #正则表达式，端口/协议
