@@ -1,12 +1,12 @@
 # 作者：小狐狸FM
-# 版本: 2022.07.06
+# 项目：https://github.com/smallfox233/FoxScript
 # 功能：提取fscan结果中的IP，递增排序显示IP，并写入文件
 
 import re
 
 if __name__ == '__main__':  # 主函数
-    fscan_pth = "data/fscan.txt"  # 读取的文件路径
-    result_pth = "data/result.txt"  # 写入的文件路径
+    fscan_pth = input("fscan结果文件路径：")  # 读取的文件路径
+    result_pth = input("输出文件路径：")  # 写入的文件路径
     fscan_lis = []
     result_lis = []
     pattern = "\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}"  # 正则表达式，IP地址
