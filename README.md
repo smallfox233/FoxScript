@@ -10,6 +10,10 @@ bash命令base64编码转换
 ```
 将命令转换为SpEL表达式并输出
 ```
+# delete_port_protocol.py
+```
+URL批量处理，删除协议头和端口等无关信息
+```
 # http_scan.py
 
 ```
