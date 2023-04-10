@@ -1,5 +1,5 @@
 # 作者: 小狐狸FM
-# 版本: 2022.07.03
+# 项目：https://github.com/smallfox233/FoxScript
 # 功能：提取fscan结果中各个IP开放的端口，显示并以IP为文件名写入对应的开放端口
 
 import os
@@ -29,10 +29,10 @@ def create_file_folder(result_file_folder):
 
 if __name__ == '__main__':  # 主函数
     # 参数
-    fscan_pth = "data/fscan.txt"  # 读取的文件路径
+    fscan_pth = input("fscan文件路径")  # 读取的文件路径
     fscan_lis = [] #列表
     result_dic = {} #字典
-    result_file_folder = "data"  # 保存各IP结果的文件夹路径
+    result_file_folder = input("目标文件夹")  # 保存各IP结果的文件夹路径
     create_file_folder(result_file_folder)
     # 读取
     with open(fscan_pth, "r", encoding="utf-8") as fp:
