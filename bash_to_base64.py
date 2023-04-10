@@ -1,4 +1,6 @@
-# bash命令base64编码转换
+# 作者：小狐狸FM
+# 项目：https://github.com/smallfox233/FoxScript
+# 功能：bash命令base64编码转换
 import base64
 
 def bash_to_base64(command):
