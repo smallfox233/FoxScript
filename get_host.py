@@ -49,6 +49,17 @@ class delete:
 
 if __name__ == '__main__': #主函数
     arg = argparse.ArgumentParser(description="功能：URL批量处理，删除协议头和端口等无关信息")
-    arg.add_argument('-f', '--folder', help="源文件夹路径\n")
-    
+    arg.add_argument('-f', '--file', help="url文件路径（默认url.txt）\n")
+    arg.add_argument('-o', '--output', help="输出文件路径（默认new.txt）\n")
+    args = arg.parse_args()
+    file = "url.txt"
+    output = "new.txt"
+    if len(sys.argv) == 1:  # 未传入参数时
+        arg.print_help()  # 打印帮助信息
+        sys.exit()
+    if args.file != None:
+        file = str(args.file)
+    if args.output != None:
+        output = str(args.output)
+    d = delete(file=file,target=output)
 
