@@ -3,6 +3,8 @@
 # 功能：提取fscan结果中的IP，递增排序显示IP，并写入文件
 
 import re
+import sys
+import argparse
 
 if __name__ == '__main__':  # 主函数
     fscan_pth = input("fscan结果文件路径：")  # 读取的文件路径

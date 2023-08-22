@@ -15,10 +15,7 @@ bash命令base64编码转换
 ```
 将指定文件夹下(包括子文件夹)的所有指定后缀文件复制至目标文件夹
 ```
-# delete_port_protocol.py
-```
-URL批量处理，删除协议头和端口等无关信息
-```
+
 # fscan_get_host.py
 ```
 提取fscan结果中的IP，递增排序显示IP，并写入文件
@@ -26,6 +23,10 @@ URL批量处理，删除协议头和端口等无关信息
 # fscan_get_port.py
 ```
 提取fscan结果中各个IP开放的端口，显示并以IP为文件名写入对应的开放端口
+```
+# get_host.py
+```
+URL批量处理，删除协议头和端口等无关信息，读取IP/域名
 ```
 # http_scan.py
 

