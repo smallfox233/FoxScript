@@ -1,5 +1,6 @@
 # FoxScript
 python脚本，数据处理、编码转换。
+采用的python库均为安装自带，无需pip安装
 
 # bash_to_base64.py
 ```
@@ -23,6 +24,10 @@ bash命令base64编码转换
 # fscan_get_port.py
 ```
 提取fscan结果中各个IP开放的端口，显示并以IP为文件名写入对应的开放端口
+```
+# fscan_get_url.py
+```
+提取fscan结果中的URL信息
 ```
 # get_host.py
 ```
