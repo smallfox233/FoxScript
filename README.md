@@ -1,6 +1,5 @@
 # FoxScript
 python脚本，数据处理、编码转换。
-采用的python库均为安装自带，无需pip安装
 
 # bash_to_base64.py
 ```
@@ -33,6 +32,11 @@ bash命令base64编码转换
 ```
 URL批量处理，删除协议头和端口等无关信息，读取IP/域名
 ```
+# JSfunction.py
+使用条件：需安装execjs第三方库
+```
+调用js函数，加密指定字典信息
+```
 # http_scan.py
 
 ```
@@ -43,7 +47,7 @@ URL批量处理，删除协议头和端口等无关信息，读取IP/域名
 ```
 过滤nmap扫描结果，获取存活IP
 ```
-#nmap_get_port.py
+# nmap_get_port.py
 ```
 过滤nmap扫描结果，正则匹配获取开放端口
 ```
