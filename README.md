@@ -28,6 +28,10 @@ bash命令base64编码转换
 ```
 提取fscan结果中的URL信息
 ```
+# folder_word_replace.py
+```
+递归替换文件夹下指定后缀文件的指定字符串
+```
 # get_host.py
 ```
 URL批量处理，删除协议头和端口等无关信息，读取IP/域名
