@@ -55,6 +55,13 @@ URL批量处理，删除协议头和端口等无关信息，读取IP/域名
 ```
 过滤nmap扫描结果，正则匹配获取开放端口
 ```
+# smtp_client.py
+依赖库：`pip install sender`
+
+```
+连接smtp发送消息
+```
+
 # substr_md5.py
 
 ```
