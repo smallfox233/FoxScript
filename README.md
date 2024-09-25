@@ -41,6 +41,10 @@ URL批量处理，删除协议头和端口等无关信息，读取IP/域名
 ```
 调用js函数，加密指定字典信息
 ```
+# minio_get_file_url.py
+```
+提取minio xml文件路径，拼接文件URL
+```
 # http_scan.py
 
 ```
